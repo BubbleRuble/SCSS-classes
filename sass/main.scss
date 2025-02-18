@@ -1,43 +1,4 @@
-$color-bgc:yellow;
-$color-text:black;
-$width:1000px;
-
-
-body{
-background-color: $color-bgc;
-color: $color-text;
-width: $width;
-}
-
-.section{
-width: 400px;
-height: 400px;
-background-color: red;
-
-.section-title{
-color: blue;
-}
-.section-text{
-color: $color-text;
-}
-}
-
-.box{
-background-color: forestgreen;
-width: 80px;
-height: 40px;
-padding: 20px;
-
-
-}
-
-.button{
-&:hover,
-&:focus{
-color: white;
-}
-.box:hover & {
-background-color: black;
-}
-
-}
+@import "./variables";
+@import "./base/normalize";
+@import "./components/page-header";
+@import "./components/hero";
