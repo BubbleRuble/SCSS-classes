@@ -1,0 +1,34 @@
+
+
+.hero-list{
+padding: 0;
+width: 100%;
+}
+.hero-block{
+display: flex;
+width: 100%;
+height: 50px;
+align-items: center;
+align-content: center;
+justify-content: center;
+}
+
+.hero-block.first{
+background-color: rgb(255, 102, 0);
+height: 50px;
+}
+.hero-block.second{
+background-color: rgb(87, 21, 241);
+}
+.hero-block.third{
+background-color: green;
+}
+.hero-block.firth{
+background-color:#06a8f3;
+}
+.hero-block.fifth{
+background-color: rgb(240, 27, 176);
+}
+.hero-block.sixth{
+background-color: forestgreen;
+}
