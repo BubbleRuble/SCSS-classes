@@ -108,213 +108,120 @@ summary {
   display: list-item;
 }
 
-body {
-  position: relative;
-  width: 100%;
-  background-color: white;
+.logo {
+  display: block;
+  background-color: blue;
+  color: white;
+  margin-left: 100px;
+  padding: 40px;
 }
 
-.header-page {
-  position: sticky;
-  top: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1400px;
+.features-set {
+  list-style: none;
+}
+@media screen and (min-width: 768px) {
+  .features-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+  }
+}
+
+.features-item {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #000;
+  font-size: 32px;
+}
+@media screen and (max-width: 480px) {
+  .features-item {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features-item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .features-item {
+    -ms-flex-preferred-size: 33.3333%;
+        flex-basis: 33.3333%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .features-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.features-item:nth-child(1) {
+  background-color: #f44336;
+}
+
+.features-item:nth-child(2) {
+  background-color: #3f51b5;
+}
+
+.features-item:nth-child(3) {
+  background-color: #4caf50;
+}
+
+.features-item:nth-child(4) {
+  background-color: #00bcd4;
+}
+
+.features-item:nth-child(5) {
+  background-color: #e91e63;
+}
+
+.features-item:nth-child(6) {
+  background-color: #009688;
+}
+
+.reviews-set {
+  list-style: none;
+  text-decoration: none;
+}
+
+.reviews-item {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #000000;
+  font-size: 32px;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  color: #2a2a2a;
+  background-color: white;
+  line-height: 1.3;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  background-color: rgb(250, 250, 237);
 }
-
-.logo {
-  height: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-top: 10px;
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
-
-.form-search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 2px solid black;
-  border-radius: 5px;
-  width: 600px;
-  height: 40px;
-  margin-top: 15px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
 }
-
-.input-search {
-  width: 600px;
-  border: none;
-  outline: none;
-  padding: 5px;
-  padding-left: 10px;
-  background-color: transparent;
-}
-
-.submit {
-  position: absolute;
-  top: 4%;
-  left: 80%;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 38px;
-  background-color: rgba(207, 207, 207, 0.5);
-  border: none;
-  cursor: pointer;
-}
-
-.submit:hover {
-  background-color: yellow;
-  border: 1px solid black;
-}
-
-.label-search {
-  position: relative;
-  border: 1px solid black;
-  padding: 5px;
-  border: none;
-  background-color: transparent;
-}
-
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  width: 370px;
-  height: 65px;
-  padding: 0;
-  margin: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.link-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100px;
-  height: 65px;
-  padding: 5px;
-  margin-top: 20px;
-  border-radius: 5px;
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-}
-
-.link-nav:hover {
-  background-color: rgba(207, 207, 207, 0.5);
-  border-radius: 5px;
-}
-
-.nav-button {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.nav-button.cabinet::before {
-  content: "";
-  position: absolute;
-  top: -85%;
-  left: 35%;
-  background-color: blue;
-  width: 24px;
-  height: 24px;
-}
-
-.nav-button.choose::before {
-  content: "";
-  position: absolute;
-  top: -85%;
-  left: 35%;
-  background-color: yellow;
-  width: 24px;
-  height: 24px;
-}
-
-.nav-button.basket::before {
-  content: "";
-  position: absolute;
-  top: -85%;
-  left: 35%;
-  background-color: red;
-  width: 24px;
-  height: 24px;
-}
-
-.hero-list {
-  padding: 0;
-  width: 100%;
-}
-
-.hero-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.hero-block.first {
-  background-color: rgb(255, 102, 0);
-  height: 50px;
-}
-
-.hero-block.second {
-  background-color: rgb(87, 21, 241);
-}
-
-.hero-block.third {
-  background-color: green;
-}
-
-.hero-block.firth {
-  background-color: #06a8f3;
-}
-
-.hero-block.fifth {
-  background-color: rgb(240, 27, 176);
-}
-
-.hero-block.sixth {
-  background-color: forestgreen;
+@media screen and (min-width: 1140px) {
+  .container {
+    width: 1200px;
+  }
 }/*# sourceMappingURL=main.css.map */
