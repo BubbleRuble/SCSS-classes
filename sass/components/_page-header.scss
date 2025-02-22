@@ -1,6 +1,15 @@
-.company-logo{
+.page-header{
 position: relative;
-display: block;
+}
+
+.page-header .nav{
+display: flex;
+align-items: center;
+justify-content: space-between;
+min-height: 80px;
+}
+
+.company-logo{
 width: 150px;
 height: 50px;
 background-color:blue;
@@ -10,9 +19,35 @@ padding-top: 20px;
 text-align: center;
 text-decoration: none;
 }
-button{
-position: absolute;
-top: 0;
-right: 20%;
-
+.menu-button{
+display: inline-flex;
+margin: 0;
+padding: 0;
+border: none;
+background-color: transparent;
 }
+.menu-button .icon-cross{
+display: none;
+}
+.menu-button.is-open .icon-cross{
+display: block;
+}
+.menu-button.is-open .icon-menu{
+display: none;
+}
+
+.menu-container{
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+height: 400px;
+background-color: palegoldenrod;
+width: 100%;
+padding: 20px;
+text-align: center;
+}
+.menu-container.is-open{
+display: block;
+}
+            
