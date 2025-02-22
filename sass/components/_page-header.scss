@@ -1,7 +1,18 @@
-.logo{
- display: block;
+.company-logo{
+position: relative;
+display: block;
+width: 150px;
+height: 50px;
 background-color:blue;
 color: white;
-margin-left: 100px;
-padding: 40px;
+padding-bottom: 20px;
+padding-top: 20px;
+text-align: center;
+text-decoration: none;
+}
+button{
+position: absolute;
+top: 0;
+right: 20%;
+
 }

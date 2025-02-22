@@ -1,13 +1,19 @@
 .features-set{
-// @extend %list;
 @media screen and (min-width:768px){
 display: flex;
 flex-wrap: wrap;
-padding: 0;
+margin: -5px;
+
+}
+
+@media screen and (min-width:1140px){
+margin: -10px;
 }
 
 list-style: none;
+padding: 0;
 }
+
 .features-item{
 text-align: center;
 padding-top: 20px;
@@ -22,11 +28,15 @@ margin-bottom: 0px;
 
             
 @media screen and (min-width:768px){
-flex-basis: 50%;
+/*calc((кількість маржинів в рядку * значення маржина) /кількість елементів в рядку )*/
+width: calc((100% - 4 * 5px) / 2);
+margin: 5px;
+
 }
 
 @media screen and (min-width:1140px){
-flex-basis: 33.3333%
+width: calc((100% - 6 * 10px) / 3);
+margin: 10px;
   }
 
 &:not(:last-child) {
@@ -56,19 +66,198 @@ background-color: #e91e63;
 background-color: #009688;
 }
 
-$colors:"#f44336", "#3f51b5", "#4caf50", "#00bcd4", "#e91e63", "#009688";
-
-// @include colorize($colors, ".features-item");
-
 .reviews-set{
 list-style: none;
-text-decoration: none;
+padding: 0;
+border: 2px solid black;
+
+@media screen and (min-width:768px){
+display: flex;
+flex-wrap: wrap;
+margin: -5px;
+
+
+}
+
+@media screen and (min-width:1140px){
+
+}
 }
 
 .reviews-item{
+padding-bottom: 20px;
+padding-top: 20px;
 text-align: center;
+font-size: 32px;
+
+@media screen and (min-width:768px){
+width: calc((100% - 4 * 5px ) / 2);
+margin: 5px;
+}
+@media screen and (min-width:1140px){
+width: calc((100% - 6 * 10px) / 3);
+margin: 10px;
+}
+}
+
+.reviews-item:nth-child(1){
+background-color: red;
+}
+.reviews-item:nth-child(2){
+background-color: yellow;
+}
+.reviews-item:nth-child(3){
+background-color: black;
+color: white;
+}
+.reviews-item:nth-child(4){
+background-color:orange;
+}
+.reviews-item:nth-child(5){
+background-color: blue;
+}
+.reviews-item:nth-child(6){
+background-color: green;
+}
+
+// --------------------------------------------------
+
+.frame-set{
+
+@media screen and (min-width:768px){
+display: flex;
+flex-wrap: wrap;
+margin: -5px;
+
+
+@media screen and (min-width:1140px){
+margin: 5px;
+}
+}
+padding: 0;
+}
+
+
+.frame-item{
+color: #000;
+text-align: center;
+list-style: none;
+font-size: 32;
 padding-top: 20px;
 padding-bottom: 20px;
-color: #000000;
-font-size: 32px;            
+
+
+@media screen and (min-width:768px){
+width: calc((100% - 6 * 5px) / 3);
+margin: 5px;
 }
+
+@media screen and (min-width:1140px){
+width: calc((100% - 8 * 5px) / 4);
+margin: 5px;
+}
+
+transition-property: background-color, color;
+transition-duration: 250ms;
+transition-timing-function: ease-out;
+}
+
+
+
+.frame-item:nth-child(1){
+background-color: red;
+}
+.frame-item:nth-child(2){
+background-color: orange;
+}
+.frame-item:nth-child(3){
+background-color: yellow;
+}
+.frame-item:nth-child(4){
+background-color:green;
+} 
+.frame-item:nth-child(5){
+background-color: blue;
+color:#fff;
+}    
+.frame-item:nth-child(6){
+background-color:indigo;
+color: #fff;
+}
+.frame-item:nth-child(7){
+background-color:violet;
+}
+.frame-item:nth-child(8){
+background-color:brown;
+@media screen and (min-width:768px) and (max-width:1139px){
+margin-left: 254px;
+}
+}
+.frame-item:hover{
+background-color: #090979;
+color: white;
+}
+
+
+
+.rainbow-set{
+list-style: none;
+padding: 0;
+
+@media screen and (min-width:768px){
+display: flex;
+flex-wrap: wrap;
+margin: -5px;
+margin-top: 20px;
+}
+
+@media screen and (min-width:1140px){
+margin: 10px;
+}
+}
+
+.rainbow-item{
+color: white;
+font-size: 32;
+padding-bottom: 20px;
+padding-top: 20px;
+text-align: center;
+
+@media screen and (min-width:768px){
+width: calc((100% - 4 * 5px) / 2);
+margin: 5px;
+}
+@media screen and (min-width:1140px){
+  width: calc((100% - 6 * 10px) / 3);
+  margin: 10px;
+  }
+
+}
+
+.rainbow-item:nth-child(1){
+background-color: black;
+}
+.rainbow-item:nth-child(2){
+background-color: brown;
+}
+.rainbow-item:nth-child(3){
+background-color: forestgreen;
+}
+.rainbow-item:nth-child(4){
+background-color:indigo;
+} 
+.rainbow-item:nth-child(5){
+background-color: blue;
+}    
+.rainbow-item:nth-child(6){
+background-color:#450043;
+}
+
+.title{
+text-align: center;
+background: linear-gradient(90deg, rgba(3,69,189,1) 13%, rgba(32,206,247,1) 35%, rgba(9,58,213,1) 71%);
+color: white;
+}
+
+
+
